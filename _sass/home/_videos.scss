@@ -1,0 +1,135 @@
+.videos {
+  display: grid;
+  margin: 10px auto;
+  height: 500px;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: "a"
+                       "b"
+                       "c";
+}
+
+.videos__title {
+  grid-area: a;
+  font-weight: 500;
+  margin: auto 10px;
+  text-align: center;
+}
+
+.videos__container {
+  grid-area: b;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "x y z";
+}
+
+.videos__list {
+  grid-area: y;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.videos__item {
+  margin: 10px auto;
+  width: 250px;
+  padding: 5px;
+}
+
+.videos__link {
+  font-family: $base__font-family--secondary;
+  font-weight: 500;
+  color: $color__black;
+  margin: 5px;
+  text-align: center;
+}
+
+.videos__subscribe {
+  margin: auto;
+}
+
+.videos__cta {
+  text-align: center;
+  font-weight: 500;
+  display: inline;
+}
+
+.videos__button {
+  background-color: $color--error;
+  color: $color__white;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+@media (max-width: $width--tablet) {
+  .videos {
+    height: 400px;
+  }
+
+  .videos__item {
+    width: 200px;
+  }
+
+  .videos__image {
+    width: 200px;
+  }
+}
+
+@media (max-width: $width--mobile-large) {
+  .videos {
+    height: 1200px;
+  }
+
+  .videos__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "x";
+  }
+
+  .videos__title {
+    font-size: rem(36);
+  }
+
+  .videos__list {
+    grid-area: x;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "x"
+                         "y"
+                         "z";
+  }
+
+  .videos__item {
+    width: 80%;
+  }
+
+  .videos__image{
+    width: 100%;
+  }
+
+  .videos__link {
+    width: 100%;
+    font-size: rem(24);
+  }
+
+  .videos__cta {
+    display: block;
+    font-size: rem(36);
+  }
+
+  .videos__button {
+    display: block;
+    text-align: center;
+    width: 150px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: $width--mobile-small) {
+  .videos {
+    height: 950px;
+  }
+
+  .videos__title {
+    font-size: rem(42);
+  }
+}

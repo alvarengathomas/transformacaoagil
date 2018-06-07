@@ -1,0 +1,93 @@
+.ebook {
+  background-color: $color--primary;
+  margin-top: 50px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "a b c";
+}
+
+.ebook__container {
+  grid-area: b;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "x y"
+                       "x z";
+}
+
+.ebook__description {
+  grid-area: y;
+  color: $color__white;
+  margin: auto;
+  font-weight: 500;
+}
+
+.ebook__form {
+  grid-area: z;
+}
+
+.ebook__image {
+  grid-area: x;
+  margin-top: -50px;
+}
+
+@media (max-width: $width--desktop) {
+  .ebook {
+    grid-template-columns: 0.8fr 2.4fr 0.8fr;
+  }
+}
+
+@media (max-width: $width--laptop) {
+  .ebook {
+    grid-template-columns: 0.6fr 2.8fr 0.6fr;
+  }
+}
+
+@media (max-width: $width--tablet) {
+  .ebook {
+    margin-top: 30px;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    height: 160px;
+  }
+
+  .ebook__description {
+    font-size: rem(20);
+  }
+
+  .ebook__image {
+    width: 150px;
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: $width--mobile-large) {
+  .ebook {
+    margin-top: 80px;
+    height: 500px;
+  }
+
+  .ebook__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "x"
+                         "y"
+                         "z";
+  }
+
+  .ebook__image {
+    width: 200px;
+    margin: auto;
+    margin-top: -50px;
+  }
+
+  .ebook__description {
+    width: 300px;
+  }
+}
+
+@media (max-width: $width--mobile-small) {
+  .ebook__description {
+    font-size: rem(30);
+  }
+}

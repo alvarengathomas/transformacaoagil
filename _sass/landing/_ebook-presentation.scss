@@ -1,0 +1,111 @@
+.ebook-presentation {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "a b c";
+  height: 400px;
+}
+
+.ebook-presentation__container {
+  grid-area: b;
+  display: grid;
+  grid-template-rows: 1fr 4fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "x d"
+                       "x y"
+                       "x z"
+                       "x e";
+}
+
+.ebook-presentation__cover {
+  grid-area: x;
+  margin: 50px;
+  width: 250px;
+}
+
+.ebook-presentation__text-container {
+  grid-area: y;
+  margin: auto;
+}
+
+.ebook-presentation__title {
+  font-weight: 500;
+}
+
+.ebook-presentation__text {
+  font-weight: 300;
+  margin: 20px 0;
+  font-size: rem(24);
+}
+
+.ebook-presentation__form {
+  grid-area: z;
+}
+
+@media (max-width: $width--desktop) {
+  .ebook-presentation {
+    grid-template-columns: 0.8fr 4.4fr 0.8fr;
+  }
+}
+
+@media (max-width: $width--laptop) {
+  .ebook-presentation {
+    grid-template-columns: 0.6fr 4.8fr 0.6fr;
+  }
+
+  .ebook-presentation__container {
+    grid-template-rows: 0.8fr 4fr 2fr 0.8fr;
+  }
+}
+
+@media (max-width: $width--tablet) {
+  .ebook-presentation {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "b";
+    height: 550px;
+  }
+
+  .ebook-presentation__container {
+    grid-area: b;
+    grid-template-rows: 1.8fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "x"
+                         "y"
+                         "z";
+  }
+
+  .ebook-presentation__cover {
+    margin: auto;
+  }
+
+  .ebook-presentation__title {
+    margin: auto 20px;
+    text-align: center;
+  }
+
+  .ebook-presentation__text {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .ebook-presentation__form {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: $width--mobile-large) {
+  .ebook-presentation {
+    height: 800px;
+  }
+}
+
+@media (max-width: $width--mobile-small) {
+  .ebook-presentation {
+    height: 750px;
+  }
+
+  .ebook-presentation__text {
+    font-size: rem(30);
+  }
+}
+

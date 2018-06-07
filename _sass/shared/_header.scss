@@ -1,0 +1,22 @@
+header {
+  display: grid;
+  height: 100px;
+}
+
+.header__link {
+  margin: auto;
+}
+
+.header__logo {
+  width: 400px;
+}
+
+@media (max-width: $width--mobile-large) {
+  header {
+    height: 50px;
+  }
+
+  .header__logo {
+    width: 250px;
+  }
+}

@@ -1,0 +1,14 @@
+title: "Transformação Ágil"
+description: "Entenda os conceitos e como por em prática as metodologias ágeis como SCRUM, Kanban entre outras com sua equipe do zero"
+baseurl: ""
+url: "https://transformacaoagil.com"
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+
+# Google Analytics
+google_analytics: UA-120135115-1
+youtube_channel: UCsqF8Md8eGvu8dF_ipGYAAA
+facebook_page: transformacaoagil
+instagram_profile: transformacaoagil

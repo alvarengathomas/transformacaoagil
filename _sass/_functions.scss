@@ -1,0 +1,7 @@
+@function rem($px) {
+  @return ($px / $base__font-size) * 1rem;
+}
+
+@function px($number) {
+  @return $number * 1px;
+}

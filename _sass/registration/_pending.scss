@@ -1,0 +1,115 @@
+.registration-pending {
+  display: grid;
+  height: calc(100vh - 250px);
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-areas: "x x x"
+                       "y y y"
+                       "z z z";
+  background-image: url('/assets/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  .overlay {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 250px);
+    z-index: 0;
+  }
+
+  .steps {
+    grid-area: y;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: repeat(3, 5fr);
+    grid-template-areas: "a a a"
+                         "b c d";
+    background-color: $color__white;
+    z-index: 2;
+    margin: auto;
+    padding: 20px;
+    height: 300px;
+
+    .title {
+      grid-area: a;
+      text-align: center;
+      margin: auto;
+      font-weight: 500;
+      font-size: 36px;
+    }
+
+    .step {
+      margin: auto;
+      display: grid;
+      grid-template-rows: 3fr 1fr 1fr;
+
+      .number{
+        margin: auto;
+        text-align: center;
+        font-weight: 500;
+        line-height: 50px;
+        color: $color--primary;
+        border: 3px solid $color--primary;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      h4{
+        margin: auto;
+        font-weight: 300;
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .registration-pending {
+    height: 500px;
+
+    .overlay {
+      height: 500px;
+    }
+
+    .steps {
+      height: 400px;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "a a"
+                           "b c"
+                           "d d";
+      .step:last-of-type {
+        grid-area: d;
+      }
+    }
+  }
+}
+
+@media (max-width: $width--mobile-large) {
+  .registration-pending {
+    height: 700px;
+
+    .overlay {
+      height: 700px;
+    }
+
+    .steps {
+      height: 600px;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "a"
+                           "b"
+                           "c"
+                           "d";
+
+      .step:first-of-type {
+        margin-bottom: -15px;
+      }
+    }
+  }
+}

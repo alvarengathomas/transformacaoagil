@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  {%- include shared/head.html -%}
+
+  <body>
+
+    {%- include shared/header.html -%}
+
+    {{ content }}
+
+    {%- include shared/footer.html -%}
+
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+      {% include shared/google-analytics.html %}
+    {% endif %}
+  </body>
+
+</html>

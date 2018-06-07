@@ -1,0 +1,32 @@
+.mc-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "a b";
+}
+
+.mc-form__field-container {
+  grid-area: a;
+  margin: auto 0;
+}
+
+.mc-form__button-container {
+  grid-area: b;
+  margin: auto 10px;
+}
+
+@media (max-width: $width--mobile-large) {
+  .mc-form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a"
+                         "b";
+  }
+
+  .mc-form__field-container {
+    margin: 5px 0;
+  }
+
+  .mc-form__button-container {
+    margin: auto 0;
+  }
+}
