@@ -62,7 +62,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "b";
-    height: 550px;
+    height: 620px;
   }
 
   .ebook-presentation__container {
@@ -95,7 +95,11 @@
 
 @media (max-width: $width--mobile-large) {
   .ebook-presentation {
-    height: 800px;
+    height: 850px;
+  }
+
+  .ebook-presentation__container {
+    grid-template-rows: 1.3fr 1fr 1fr;
   }
 }
 

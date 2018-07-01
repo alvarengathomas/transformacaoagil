@@ -27,7 +27,7 @@
 }
 
 .banner__phrase {
-  padding: 0 10px;
+  padding: 10px;
   font-weight: 300;
   text-align: center;
 }
@@ -56,6 +56,10 @@
 
   .banner__mask {
     height: 200px;
+  }
+
+  .banner__phrase {
+    padding: 0 10px;
   }
 }
 
