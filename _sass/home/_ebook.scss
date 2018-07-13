@@ -1,6 +1,5 @@
 .ebook {
   background-color: $color--primary;
-  margin-top: 50px;
   height: 200px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -19,7 +18,7 @@
 .ebook__description {
   grid-area: y;
   color: $color__white;
-  margin: auto;
+  margin: 15px auto;
   font-weight: 500;
 }
 
@@ -29,7 +28,8 @@
 
 .ebook__image {
   grid-area: x;
-  margin-top: -50px;
+  margin: -75px auto 0;
+  z-index: 1;
 }
 
 @media (max-width: $width--desktop) {
@@ -46,7 +46,6 @@
 
 @media (max-width: $width--tablet) {
   .ebook {
-    margin-top: 30px;
     grid-template-columns: 0.5fr 3fr 0.5fr;
     height: 160px;
   }
@@ -57,19 +56,18 @@
 
   .ebook__image {
     width: 150px;
-    margin-top: -30px;
+    margin-top: -50px;
   }
 }
 
 @media (max-width: $width--mobile-large) {
   .ebook {
-    margin-top: 80px;
-    height: 500px;
+    height: 520px;
   }
 
   .ebook__container {
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.3fr 0.3fr;
     grid-template-areas: "x"
                          "y"
                          "z";
@@ -78,7 +76,6 @@
   .ebook__image {
     width: 200px;
     margin: auto;
-    margin-top: -50px;
   }
 
   .ebook__description {

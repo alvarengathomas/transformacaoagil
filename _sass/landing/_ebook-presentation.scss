@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-areas: "a b c";
   height: 400px;
+  margin-bottom: 50px;
 }
 
 .ebook-presentation__container {
@@ -18,7 +19,7 @@
 
 .ebook-presentation__cover {
   grid-area: x;
-  margin: 50px;
+  margin: 0 50px;
   width: 250px;
 }
 
