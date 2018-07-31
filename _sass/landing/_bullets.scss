@@ -1,0 +1,107 @@
+.bullets {
+  margin: 0 auto;
+  height: 450px;
+  margin: 15px 0 30px 0;
+}
+
+.bullets__container {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 300px 750px 1fr;
+  grid-template-areas: "x ebook text y";
+}
+
+.bullets__ebook {
+  grid-area: ebook;
+  margin: auto;
+}
+
+.bullets__text-container {
+  grid-area: text;
+  margin: auto 20px;
+}
+
+.bullets__title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.bullets__text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $base__font-family--secondary;
+  margin: 20px 0;
+
+  p {
+    margin: 10px 0;
+  }
+
+  ul {
+    margin: 10px 0 10px 20px;
+  }
+}
+
+.bullets__form {
+  margin: auto;
+}
+
+@media (max-width: $width--laptop) {
+  .bullets {
+    height: 600px;
+  }
+
+  .bullets__container {
+    grid-template-columns: 280px 1fr;
+    grid-template-areas: "ebook text";
+  }
+
+  .bullets__ebook {
+    width: 280px;
+  }
+}
+
+@media (max-width: $width--tablet) {
+  .bullets {
+    height: 900px;
+    margin: 0 0 10px 0;
+  }
+
+  .bullets__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+    grid-template-areas: "ebook"
+                         "text";
+  }
+
+  .bullets__text-container {
+    margin: 0 10px;
+  }
+
+  .bullets__ebook {
+    width: 300px;
+  }
+}
+
+@media (max-width: $width--mobile-large) {
+  .bullets {
+    height: 1250px;
+  }
+
+  .bullets__title {
+    text-align: center;
+    margin: auto;
+    font-size: 36px;
+  }
+
+  .bullets__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $width--mobile-small) {
+  .bullets {
+    height: 1350px;
+  }
+}
+
