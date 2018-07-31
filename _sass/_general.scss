@@ -13,19 +13,19 @@ body {
 }
 
 h1 {
-  font-size: rem(48);
+  font-size: 48px;
 }
 
 h2 {
-  font-size: rem(36);
+  font-size: 36px;
 }
 
 h3 {
-  font-size: rem(24);
+  font-size: 24px;
 }
 
 h4 {
-  font-size: rem(18);
+  font-size: 18px;
 }
 
 a {
@@ -35,39 +35,20 @@ a {
 input[type="text"],
 input[type="email"] {
   box-sizing: content-box;
-  height: 50px;
+  height: 60px;
   width: 100%;
   border-radius: 3px;
   border: 1px solid $color__gray--light;
-  font-size: rem(18);
+  font-size: 20px;
   font-family: $base__font-family--secondary;
   color: $color__gray--dark;
   text-indent: 10px;
 }
 
-button,
-input[type="submit"] {
-  border-radius: 2px;
-  padding: 5px;
-  border: 0px;
-  color: $color__white;
-  width: 100%;
-  height: 50px;
-  font-size: rem(20);
-  font-weight: 500;
-  font-family: $base__font-family--primary;
-}
-
 @media (max-width: $width--tablet) {
   input[type="text"],
   input[type="email"] {
-    height: 40px;
-  }
-
-  button,
-  input[type="submit"] {
-    height: 40px;
-    font-size: rem(18);
+    height: 50px;
   }
 }
 
@@ -88,11 +69,6 @@ input[type="submit"] {
 
   input[type="text"],
   input[type="email"] {
-    font-size: rem(24);
-  }
-
-  button,
-  input[type="submit"] {
     font-size: rem(24);
   }
 }

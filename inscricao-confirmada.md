@@ -3,5 +3,5 @@ layout: default
 title: "Inscrição Confirmada"
 ---
 
-{%- include shared/facebook-pixel-lead.html -%}
+{%- include pixels/fb-complete-registration.html -%}
 {%- include registration/confirmed.html -%}
