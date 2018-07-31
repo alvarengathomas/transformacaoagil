@@ -1,0 +1,54 @@
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
+        <label class="modal__title">
+          Siga os passos abaixo corretamente para você se inscrever e fazer o download.
+        </label>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+      </header>
+      <main>
+        <form
+          class="modal__content"
+          autocomplete="false"
+          role="form"
+          method="post"
+          action="https://mautic.transformacaoagil.com/index.php/form/submit?formId={{ page.form_id }}"
+          id="mauticform_{{ page.form_name }}"
+          data-mautic-form="{{ page.form_name }}"
+          enctype="multipart/form-data">
+
+          <h2 class="modal__step">1º PASSO</h2>
+          <h3 class="modal__step-description">Preencha o campo abaixo</h3>
+
+          <input
+            id="mauticform_input_{{ page.form_name }}_email"
+            name="mauticform[email]"
+            class="modal__input"
+            type="email"
+            placeholder="Digite seu melhor e-mail"
+            required/>
+
+          <h2 class="modal__step">2º PASSO</h2>
+          <h3 class="modal__step-description">Clique e confirme sua inscrição</h3>
+
+          <button
+            type="submit"
+            name="mauticform[submit]"
+            id="mauticform_input_{{ page.form_name }}_submit"
+            name="mauticform[submit]"
+            class="modal__btn">DOWNLOAD GRATUITO</button>
+
+          <input
+            type="hidden"
+            name="mauticform[formId]"
+            id="mauticform_{{ page.form_name }}_id"
+            value="{{ page.form_id }}"/>
+        </form>
+      </main>
+      <footer class="modal__footer">
+        <span class="modal__lock"></span> Suas informações estão seguras.
+      </footer>
+    </div>
+  </div>
+</div>

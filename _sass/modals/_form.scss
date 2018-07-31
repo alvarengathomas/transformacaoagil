@@ -1,0 +1,219 @@
+.modal {
+  font-family: $base__font-family--primary;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal__container {
+  background-color: #fff;
+  max-width: 600px;
+  max-height: 100vh;
+  border: 5px solid rgba(255,255,255,.2);
+  background-clip: padding-box;
+  border-radius: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 130px 300px 50px;
+  grid-template-areas: "title"
+                       "form"
+                       "disclaimer";
+  z-index: 3;
+}
+
+.modal__header {
+  display: grid;
+  background-color: $color--primary;
+}
+
+.modal__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.25;
+  color: $color__white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto 30px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: $color__gray--dark;
+  border: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: $color__white;
+}
+
+.modal__header .modal__close:before {
+  content: "\2715";
+}
+
+.modal__content {
+  line-height: 1.5;
+  color: rgba(0,0,0,.8);
+  padding: 10px 60px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px 100px 50px 80px;
+  grid-template-areas: "s1 d1"
+                       "input input"
+                       "s2 d2"
+                       "button button";
+}
+
+.modal__step {
+  font-weight: 500;
+}
+
+.modal__step-description {
+  font-weight: 300;
+  margin: auto 0;
+  text-align: right;
+}
+
+.modal__input {
+  grid-area: input;
+  margin: auto;
+}
+
+.modal__btn {
+  grid-area: button;
+  border-radius: 5px;
+  padding: 15px;
+  border: 0px;
+  color: $color__white;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: $base__font-family--secondary;
+  background-color: $color--primary;
+  margin: 10px auto;
+}
+
+.modal__footer {
+  margin: auto;
+}
+
+.modal__footer .modal__lock:before {
+  content: "\01F512";
+  margin-right: 5px;
+}
+
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
+@media (max-width: $width--mobile-large) {
+  .modal__container {
+    max-width: 100%;
+    grid-template-rows: 150px 300px 30px;
+  }
+
+  .modal__content {
+    padding: 0 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 30px 60px 60px 30px 70px;
+    grid-template-areas: "s1"
+                         "d1"
+                         "input"
+                         "s2"
+                         "d2"
+                         "button";
+  }
+
+  .modal__header {
+    padding: 15px;
+  }
+
+  .modal__title {
+    font-size: 26px;
+  }
+
+  .modal__step {
+    margin: auto;
+  }
+
+  .modal__step-description {
+    text-align: center;
+  }
+
+  .modal__input {
+    text-align: center;
+  }
+
+  .modal__btn {
+    margin: 10px auto;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $width--mobile-small) {
+  .modal__title {
+    font-size: 24px;
+  }
+
+  .modal__step-description {
+    font-size: 18px;
+  }
+}
