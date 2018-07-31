@@ -1,4 +1,4 @@
-.mini-banner {
+.mini-hero {
   display: grid;
   height: 150px;
   grid-template-rows: repeat(3, 1fr);
@@ -12,7 +12,7 @@
   z-index: -1;
 }
 
-.mini-banner__mask {
+.mini-hero__mask {
   background-color: rgba(0,0,0,0.7);
   position: absolute;
   width: 100%;
@@ -20,48 +20,48 @@
   z-index: 0;
 }
 
-.mini-banner__container {
+.mini-hero__container {
   grid-area: b;
   z-index: 1;
   margin: auto;
 }
 
-.mini-banner__title {
+.mini-hero__title {
   padding: 0 10px;
   font-weight: 300;
   text-align: center;
 }
 
 @media (max-width: $width--tablet) {
-  .mini-banner {
+  .mini-hero {
     height: 100px;
   }
 
-  .mini-banner__mask {
+  .mini-hero__mask {
     height: 100px;
   }
 }
 
 @media (max-width: $width--mobile-large) {
-  .mini-banner {
+  .mini-hero {
     height: 80px;
   }
 
-  .mini-banner__mask {
+  .mini-hero__mask {
     height: 80px;
   }
 
-  .mini-banner__title {
+  .mini-hero__title {
     font-size: rem(40);
   }
 }
 
 @media (max-width: $width--mobile-small) {
-  .mini-banner {
+  .mini-hero {
     height: 50px;
   }
 
-  .mini-banner__mask {
+  .mini-hero__mask {
     height: 50px;
   }
 }

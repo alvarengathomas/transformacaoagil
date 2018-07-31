@@ -1,12 +1,14 @@
 <div class="ebook">
-  <div class="ebook__container">
-    <img class="ebook__image" src="{{ "/assets/img/ebook-200.png" | relative_url }}" />
-    <h3 class="ebook__description">
-      Baixe nosso ebook e aprenda como evitar 7 erros comuns ao implementar
-      as metodologias ágeis que você pode estar cometendo hoje com sua equipe!
-    </h3>
-    <div class="ebook__form">
-      {%- include mailchimp-forms/home.html -%}
+  <div class="container">
+    <div class="ebook__container">
+      <img class="ebook__image" src="{{ "/assets/img/ebook-250.png" | relative_url }}" />
+      <div class="ebook__cta">
+        <h3 class="ebook__description">
+          Baixe o ebook gratuito e descubra os sete erros que me atrasaram em dois
+          anos até aprender a aplicar as metodologias ágeis da maneira certa!
+        </h3>
+        <button data-micromodal-trigger="modal-1" class="button--cta background__color--info">{{ page.cta_button }}</button>
+      </div>
     </div>
   </div>
 </div>

@@ -1,21 +1,18 @@
-footer {
+.footer {
   background-color: $color__gray--dark;
   height: 150px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "a b c";
-  font-size: rem(18);
+  font-size: 18px;
 }
 
 .footer__container {
-  grid-area: b;
+  grid-area: content;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-areas: "x y z";
+  grid-template-columns: 1fr 200px 500px 200px 1fr;
+  grid-template-areas: "x icon disclaimer social y";
 }
 
 .footer__disclaimer {
-  grid-area: y;
+  grid-area: disclaimer;
   margin: auto;
   color: $color__white;
   font-weight: 300;
@@ -31,13 +28,14 @@ footer {
 }
 
 .footer__icon {
-  grid-area: x;
+  grid-area: icon;
   width: 100px;
   display: block;
   margin: auto;
 }
 
 .footer__social {
+  grid-area: social;
   margin: auto;
 }
 
@@ -46,54 +44,33 @@ footer {
   margin: 0 10px;
 }
 
-@media (max-width: $width--desktop) {
-  footer {
-    grid-template-columns: 0.8fr 2.4fr 0.8fr;
-  }
-}
-
 @media (max-width: $width--laptop) {
-  footer {
-    grid-template-columns: 0.5fr 3fr 0.5fr;
+  .footer__container {
+    grid-template-columns: 1fr 150px 450px 150px 1fr;
   }
 }
 
 @media (max-width: $width--tablet) {
   .footer__container {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "x y";
+    grid-template-columns: 1fr 420px 150px 1fr;
+    grid-template-areas: "x disclaimer social y";
   }
 
   .footer__icon {
     display: none;
   }
-
-  .footer__disclaimer {
-    grid-area: x;
-  }
-
-  .footer__social {
-    grid-area: y;
-  }
 }
 
 @media (max-width: $width--mobile-large) {
-  footer {
-    height: 180px;
-    grid-template-columns: 0.3fr 3.4fr 0.3fr;
+  .footer {
+    height: 200px;
   }
 
   .footer__container {
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "x"
-                         "y";
-  }
-}
-
-@media (max-width: $width--mobile-small) {
-  footer {
-    font-size: rem(24);
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "disclaimer"
+                         "social";
   }
 }
 

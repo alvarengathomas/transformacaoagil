@@ -1,29 +1,26 @@
 .videos {
-  display: grid;
   margin: 10px auto;
-  height: 500px;
-  grid-template-rows: 1fr 2fr 1fr;
-  grid-template-areas: "a"
-                       "b"
-                       "c";
+  height: 450px;
+}
+
+.videos__container {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 100px 230px 1fr;
+  grid-template-areas: "title"
+                       "list"
+                       "subscribe";
 }
 
 .videos__title {
-  grid-area: a;
+  grid-area: title;
   font-weight: 500;
   margin: auto 10px;
   text-align: center;
 }
 
-.videos__container {
-  grid-area: b;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-areas: "x y z";
-}
-
 .videos__list {
-  grid-area: y;
+  grid-area: list;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -43,6 +40,7 @@
 }
 
 .videos__subscribe {
+  grid-area: subscribe;
   margin: auto;
 }
 
@@ -66,12 +64,16 @@
     height: 400px;
   }
 
+  .videos__container {
+    grid-template-rows: 100px 230px 1fr;
+  }
+
   .videos__item {
-    width: 200px;
+    width: 180px;
   }
 
   .videos__image {
-    width: 200px;
+    width: 180px;
   }
 }
 
@@ -81,39 +83,34 @@
   }
 
   .videos__container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "x";
+    grid-template-rows: 180px 800px 1fr;
   }
 
   .videos__title {
-    font-size: rem(36);
+    font-size: 36px;
   }
 
   .videos__list {
-    grid-area: x;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "x"
-                         "y"
-                         "z";
   }
 
   .videos__item {
-    width: 80%;
+    width: 250px;
   }
 
-  .videos__image{
-    width: 100%;
+  .videos__image {
+    width: 250px;
   }
 
   .videos__link {
     width: 100%;
-    font-size: rem(24);
+    font-size: 24px;
   }
 
   .videos__cta {
     display: block;
-    font-size: rem(36);
+    font-size: 30px;
   }
 
   .videos__button {
@@ -121,15 +118,5 @@
     text-align: center;
     width: 150px;
     margin: 10px auto;
-  }
-}
-
-@media (max-width: $width--mobile-small) {
-  .videos {
-    height: 950px;
-  }
-
-  .videos__title {
-    font-size: rem(42);
   }
 }

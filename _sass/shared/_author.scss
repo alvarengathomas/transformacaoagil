@@ -1,98 +1,105 @@
 .author {
+  height: 300px;
   margin-bottom: 50px;
-  height: 350px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "a b c";
 }
 
 .author__container {
-  grid-area: b;
+  grid-area: content;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 0.5fr 2fr;
-  grid-template-areas: "x x"
-                       "y z";
+  grid-template-columns: 1fr 700px 300px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: "x title title y"
+                       "x text photo y";
 }
 
 .author__title {
-  grid-area: x;
-  font-size: rem(36);
+  grid-area: title;
+  font-size: 36px;
   font-weight: 500;
   text-align: left;
 }
 
 .author__text {
-  grid-area: y;
-  font-size: rem(20);
-  line-height: 1.4;
-  font-weight: 300;
-  margin: auto 30px auto auto;
+  grid-area: text;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $base__font-family--secondary;
+  margin: 20px 30px 0 0;
+
+  p {
+    margin: 10px 0;
+  }
+
+  ul {
+    margin: 10px 0 10px 20px;
+  }
 }
 
 .author__photo {
-  grid-area: z;
+  grid-area: photo;
   width: 250px;
   margin: auto;
   border-radius: 5px;
 }
 
-@media (max-width: $width--desktop) {
-  .author {
-    grid-template-columns: 0.8fr 2.4fr 0.8fr;
-  }
-}
-
 @media (max-width: $width--laptop) {
   .author {
-    grid-template-columns: 0.6fr 2.8fr 0.6fr;
+    height: 350px;
+  }
+
+  .author__container {
+    grid-template-columns: 1fr 500px 250px 1fr;
   }
 }
 
 @media (max-width: $width--tablet) {
   .author {
-    grid-template-columns: 0.5fr 3fr 0.5fr;
+    height: 450px;
+    margin-bottom: 30px;
+  }
+
+  .author__container {
+    grid-template-columns: 1fr 380px 200px 1fr;
   }
 
   .author__photo {
     width: 200px;
   }
-
-  .author__text {
-    font-size: rem(18);
-  }
 }
 
 @media (max-width: $width--mobile-large) {
   .author {
-    margin-top: 20px;
-    height: 650px;
+    height: 840px;
+    margin-bottom: 10px;
   }
 
   .author__container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 5fr;
-    grid-template-areas: "x"
-                         "z"
-                         "y";
+    grid-template-rows: 50px 300px 1fr;
+    grid-template-areas: "title"
+                         "photo"
+                         "text";
   }
 
   .author__title {
-    width: 300px;
     text-align: center;
     margin: auto;
   }
 
+  .author__photo {
+    width: 250px;
+  }
+
   .author__text {
-    width: 300px;
-    text-align: justify;
-    font-size: rem(20);
-    margin: auto;
+    font-size: 18px;
+    margin: 0 10px;
   }
 }
 
 @media (max-width: $width--mobile-small) {
-  .author__text {
-    font-size: rem(28);
+  .author {
+    height: 960px;
+    margin-bottom: 10px;
   }
 }
+

@@ -1,0 +1,5 @@
+{% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include pixels/ga.html %}
+{% endif %}
+{% include pixels/mautic.html %}
+{% include modals/script.html %}

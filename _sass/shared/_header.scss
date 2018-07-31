@@ -1,9 +1,9 @@
-header {
-  display: grid;
+.header {
   height: 100px;
 }
 
 .header__link {
+  grid-area: content;
   margin: auto;
 }
 
@@ -12,7 +12,7 @@ header {
 }
 
 @media (max-width: $width--mobile-large) {
-  header {
+  .header {
     height: 50px;
   }
 

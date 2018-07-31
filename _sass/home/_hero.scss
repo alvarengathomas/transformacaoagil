@@ -1,18 +1,13 @@
-.banner {
-  display: grid;
-  height: 450px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "a"
-                       "b"
-                       "c";
+.hero {
   background-image: url('/assets/img/bg.jpg');
   background-size: cover;
   background-position: center;
   color: $color__white;
+  height: 450px;
   z-index: -1;
 }
 
-.banner__mask {
+.hero__mask {
   background-color: rgba(0,0,0,0.7);
   position: absolute;
   width: 100%;
@@ -20,55 +15,50 @@
   z-index: 0;
 }
 
-.banner__container {
-  grid-area: b;
+.hero__container {
   z-index: 1;
   margin: auto;
+  grid-area: content;
+  text-align: center;
 }
 
-.banner__phrase {
+.hero__phrase {
   padding: 10px;
   font-weight: 300;
-  text-align: center;
 }
 
-.banner__author {
-  margin: auto;
+.hero__author {
   font-weight: 300;
-  text-align: center;
-  margin-right: 10px;
 }
 
 @media (max-width: $width--tablet) {
-  .banner {
+  .hero {
     height: 300px;
   }
 
-  .banner__mask {
+  .hero__mask {
     height: 300px;
+  }
+
+  .hero__phrase {
+    font-size: 36px;
+  }
+
+  .hero__author {
+    font-size: 24px;
   }
 }
 
 @media (max-width: $width--mobile-large) {
-  .banner {
+  .hero {
     height: 200px;
   }
 
-  .banner__mask {
+  .hero__mask {
     height: 200px;
   }
 
-  .banner__phrase {
+  .hero__phrase {
     padding: 0 10px;
-  }
-}
-
-@media (max-width: $width--mobile-small) {
-  .banner {
-    height: 150px;
-  }
-
-  .banner__mask {
-    height: 150px;
   }
 }

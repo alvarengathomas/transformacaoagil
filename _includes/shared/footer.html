@@ -1,34 +1,36 @@
-<footer>
-  <div class="footer__container">
-    <img class="footer__icon" src="{{ "/assets/img/icon.svg" | relative_url }}">
-    <div class="footer__disclaimer">
-      <p>{{ 'now' | date: "%Y" }} © Plenitude Software - Todos os direitos reservados</p>
-      <a
-        class="footer__link"
-        target="_blank"
-        href="/politica-de-privacidade">
-        Políticas de Privacidade
-      </a> |
-      <a
-        class="footer__link"
-        target="_blank"
-        href="/termos-de-uso">
-        Termos de Uso
-      </a>
-    </div>
-    <div class="footer__social">
-      <a
-        class="footer__social-link"
-        target="_blank"
-        href="https://facebook.com/{{ site.facebook_page }}">
-        <img src="{{ "/assets/img/facebook.png" | relative_url }}">
-      </a>
-      <a
-        class="footer__social-link"
-        target="_blank"
-        href="https://instagram.com/{{ site.instagram_profile }}">
-        <img src="{{ "/assets/img/instagram.png" | relative_url }}">
-      </a>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <img class="footer__icon" src="{{ "/assets/img/icon.svg" | relative_url }}">
+      <div class="footer__disclaimer">
+        <p>{{ 'now' | date: "%Y" }} © Plenitude Software - Todos os direitos reservados</p>
+        <a
+          class="footer__link"
+          target="_blank"
+          href="/politica-de-privacidade">
+          Políticas de Privacidade
+        </a> |
+        <a
+          class="footer__link"
+          target="_blank"
+          href="/termos-de-uso">
+          Termos de Uso
+        </a>
+      </div>
+      <div class="footer__social">
+        <a
+          class="footer__social-link"
+          target="_blank"
+          href="https://facebook.com/{{ site.facebook_page }}">
+          <img src="{{ "/assets/img/facebook.png" | relative_url }}">
+        </a>
+        <a
+          class="footer__social-link"
+          target="_blank"
+          href="https://instagram.com/{{ site.instagram_profile }}">
+          <img src="{{ "/assets/img/instagram.png" | relative_url }}">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
