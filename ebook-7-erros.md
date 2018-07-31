@@ -4,7 +4,7 @@ title: "Ebook 7 Erros Comuns ao Implementar Metodologias Ágeis e Como Evitá-lo
 description: "Baixe agora o ebook gratuito e descubra os 7 erros que eu
 cometi antes de dobrar meu salário de programador utilizando métodologias ágeis"
 cta_title: "Descubra os 7 Erros que Eu Cometi Antes de Dobrar Meu Salário de
-Programador Utilizando Apenas Métodologias Ágeis"
+Programador Utilizando Métodologias Ágeis"
 cta_text: "Baixe agora o ebook gratuito"
 cta_button: "FAZER DOWNLOAD DO EBOOK GRÁTIS"
 form_id: 2
