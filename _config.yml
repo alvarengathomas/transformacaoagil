@@ -12,3 +12,6 @@ google_analytics: UA-120135115-1
 youtube_channel: UCsqF8Md8eGvu8dF_ipGYAAA
 facebook_page: transformacaoagil
 instagram_profile: transformacaoagil
+
+plugins:
+- jekyll-autoprefixer
