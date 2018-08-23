@@ -5,7 +5,7 @@ url: "https://transformacaoagil.com"
 
 # Build settings
 markdown: kramdown
-permalink: /:title
+permalink: /:title/
 
 # Google Analytics
 google_analytics: UA-120135115-1
