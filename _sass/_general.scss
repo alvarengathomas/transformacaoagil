@@ -45,6 +45,10 @@ input[type="email"] {
   text-indent: 10px;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (max-width: $width--tablet) {
   input[type="text"],
   input[type="email"] {
