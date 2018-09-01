@@ -3,22 +3,24 @@
     <div class="videos__container">
       <h2 class="videos__title">Aprenda a aplicar as <span class="text--highlight">metodologias ágeis</span> na prática</h2>
       <div class="videos__list">
+        {% for post in site.posts %}
+        <div class="videos__item">
+          <a href="{{ post.url }}">
+            <img class="videos__image" src="{{ "/assets/img/posts/" | append: post.thumb | relative_url }}" />
+            <h4 class="videos__link">{{ post.title }}</h4>
+          </a>
+        </div>
+        {% endfor %}
         <div class="videos__item">
           <a href="#">
             <img class="videos__image" src="{{ "/assets/img/video.png" | relative_url }}" />
-            <h4 class="videos__link">Título de um vídeo do canal do youtube</h4>
+            <h4 class="videos__link">Em breve</h4>
           </a>
         </div>
         <div class="videos__item">
           <a href="#">
             <img class="videos__image" src="{{ "/assets/img/video.png" | relative_url }}" />
-            <h4 class="videos__link">Título de um vídeo do canal do youtube</h4>
-          </a>
-        </div>
-        <div class="videos__item">
-          <a href="#">
-            <img class="videos__image" src="{{ "/assets/img/video.png" | relative_url }}" />
-            <h4 class="videos__link">Título de um vídeo do canal do youtube</h4>
+            <h4 class="videos__link">Em breve</h4>
           </a>
         </div>
       </div>
